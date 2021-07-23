@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build"
+    "build": "vue-cli-service build",
+    "format": "yarn run prettier --ignore-path .gitignore --no-semi --write ."
   },
   "dependencies": {
     "core-js": "^3.6.5",
@@ -13,7 +14,8 @@
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.5.0",
     "@vue/cli-service": "~4.5.0",
-    "@vue/compiler-sfc": "^3.0.0"
+    "@vue/compiler-sfc": "^3.0.0",
+    "prettier": "^2.3.2"
   },
   "browserslist": [
     "> 1%",

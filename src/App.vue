@@ -6,17 +6,13 @@
 </template>
 
 <script>
-
-
-import Header from './components/Header.vue'
-import Body from './components/Body.vue'
-import Sheet from './components/CheatSheet.vue'
-import SavedExpressions from './components/SavedExpressions.vue'
-
+import Header from "./components/Header.vue"
+import Body from "./components/Body.vue"
+import Sheet from "./components/CheatSheet.vue"
+import SavedExpressions from "./components/SavedExpressions.vue"
 
 export default {
-  name: 'App',
-
+  name: "App",
 
   components: {
     Header,
@@ -25,15 +21,12 @@ export default {
     SavedExpressions,
   },
 
-
   data() {
     return {
       savedExps: [],
-      savedFlags: []
+      savedFlags: [],
     }
   },
- 
-
 }
 </script>
 
@@ -44,7 +37,6 @@ export default {
   box-sizing: border-box;
 }
 body {
-    text-align: center;
+  text-align: center;
 }
-
 </style>
