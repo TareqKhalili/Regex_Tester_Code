@@ -1,13 +1,7 @@
 <template>
   <div class="inputArea">
     <div class="expression">
-      <input
-        type="text"
-        @keyup="evaluate"
-        placeholder="Expression"
-        v-model="exp"
-        id="exp"
-      />
+      <input type="text" placeholder="Expression" v-model="exp" id="exp" />
       <input
         type="text"
         @keyup="evaluate"
@@ -18,16 +12,10 @@
       <button class="save" @click="save">Save</button>
     </div>
 
-    <input
-      type="text"
-      @keyup="evaluate"
-      :placeholder="exp"
-      v-model="text"
-      id="text"
-    />
+    <input type="text" :placeholder="exp" v-model="text" id="text" />
   </div>
 
-  <div :class="['outputArea', exp == '' ? 'hide' : '']">
+  <div class="outputArea" v-show="exp">
     <div v-for="res in result" :key="res.id">
       <div class="output">
         {{ res }}
@@ -47,15 +35,16 @@ export default {
       exp: "",
       flags: "",
       text: "Here is -some- 123 ex@ample text",
-      result: "",
     }
   },
 
-  methods: {
-    evaluate() {
-      let exp = new RegExp(this.exp, this.flags)
-      this.result = exp.exec(this.text)
+  computed: {
+    result() {
+      return new RegExp(this.exp, this.flags).exec(this.text)
     },
+  },
+
+  methods: {
     save() {
       localStorage.setItem(this.exp, this.flags)
       this.savedExps.push(this.exp)
