@@ -1,13 +1,13 @@
 <template>
   <header>
-    <img src="../assets/logo.svg" alt="Logo">
+    <img src="../assets/logo.svg" alt="Logo" />
     <h3>Regex Tester</h3>
   </header>
 </template>
 
 <script>
 export default {
-  name: 'Header',
+  name: "Header",
 }
 </script>
 
