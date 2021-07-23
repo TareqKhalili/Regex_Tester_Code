@@ -1,4 +1,16 @@
-# regex
+# THIS THE CODE FOR THE REGEX-TESTER APPLICATION 
+# Regex Tester
+### Instant Regex Tester 
+
+
+### check out the webssite here: https://regex-visual-486fa.firebaseapp.com/
+
+### __Features__
+
+1. Instant results
+2. Save expressions to use them later 
+3. Cheat sheet included
+
 
 ## Project setup
 ```
@@ -15,6 +27,3 @@ yarn serve
 yarn build
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
-# Regex_Tester_Code
